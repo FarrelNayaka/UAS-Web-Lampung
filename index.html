@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampung | Kelompok 2 PTI Kelas H</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <style>
+        .navbar {
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .navbar-brand img {
+            max-height: 100%;
+            margin-right: 10px;
+        }
+
+        .navbar-brand-text {
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            font-family: 'Roboto', sans-serif; 
+        }
+
+        .navbar-nav .nav-link {
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link.wisata {
+            margin-right: 60px;
+        }
+
+        .navbar-nav .nav-link.sejarah {
+            margin-right: 60px;
+        }
+
+        .navbar-nav .nav-link.pemerintahan {
+            margin-right: 40px;
+        }
+
+        .navbar .form-control {
+            width: 300px;
+        }
+
+        body {
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Roboto', sans-serif; 
+            transition: background-image 0.5s ease; 
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1; 
+        }
+
+        .content {
+            text-align: left;
+            margin-top: 10%; 
+            color: #fff;
+            padding: 0 20px;
+            position: relative; 
+            z-index: 1; 
+        }
+
+        h1 {
+            font-size: 6rem; 
+            font-weight: bold;
+            margin-left: 160px;
+            margin-top: 30px; 
+        }
+
+        p {
+            font-size: 3rem; 
+            margin-left: 160px;
+        }
+
+        h3 {
+            font-size: 2.5rem; 
+            margin-bottom: 10px;
+            margin-left: 160px;
+            margin-top: 10px; 
+        }
+
+        .btn-mulai {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px; 
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+            position: absolute; 
+            bottom: -50px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+
+        @media only screen and (max-width: 768px) {
+            .content {
+                padding-bottom: 100px; 
+            }
+
+            .btn-mulai {
+                bottom: -100px; 
+                left: 50%;
+                transform: translateX(-50%); 
+            }
+        }
+
+
+        .btn-mulai:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .panah {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #000;
+            z-index: 9999;
+            font-family: 'Roboto', sans-serif; 
+        }
+
+        .panah-kiri {
+            left: 20px;
+        }
+
+        .panah-kanan {
+            right: 20px;
+        }
+
+
+        @media only screen and (max-width: 768px) {
+            .content {
+                margin-top: 5%; 
+            }
+            h1 {
+                font-size: 4rem; 
+                margin-left: 20px; 
+                margin-top: 20px; 
+            }
+            p {
+                font-size: 2rem; 
+                margin-left: 20px; 
+            }
+            h3 {
+                font-size: 1.5rem; 
+                margin-left: 20px;
+                margin-top: 10px; 
+            }
+            .btn-mulai {
+                bottom: 20px; 
+                font-size: 1.2rem; 
+                padding: 8px 16px; 
+            }
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
+            transition: opacity 0.2s ease; /* Tambahkan transition untuk opacity */
+            opacity: 1; 
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="Gambar Lampung Indonesia Monumen Menara Siger Cat Air, Lampung, Siger, Siger Lampung PNG dan PSD untuk Muat turun Percuma.png" alt="Logo" height="40">
+                <span class="navbar-brand-text">Lampung</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link wisata" href="wisata.html">Wisata</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sejarah" href="sejarah.html">Sejarah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pemerintahan" href="pemerintahan.html">Pemerintahan</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Temukan hal lainnya" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="background"></div>
+
+    <div class="content">
+        <h1>K o t a  L a m p u n g</h1>
+        <p>M e l a y a n i  M a s y a r a k a t</p>
+        <h3>"Sang Bumi Ruwa Jurai"</h3>
+        <button class="btn btn-mulai" onclick="playYouTubeVideo()">Mulai</button>
+    </div>
+
+    <div class="panah panah-kiri">&lt;</div>
+    <div class="panah panah-kanan">&gt;</div>
+
+    <script>
+        var backgrounds = [
+            'url("WhatsApp Image 2024-05-13 at 9.00.13 AM (1).jpeg")',
+            'url("WhatsApp Image 2024-05-13 at 9.00.12 AM (2).jpeg")',
+            'url("WhatsApp Image 2024-05-13 at 9.00.12 AM.jpeg")'
+        ];
+
+        var currentBackgroundIndex = 0;
+        var background = document.querySelector('.background');
+
+        function changeBackground(index) {
+            background.style.backgroundImage = backgrounds[index];
+        }
+
+        document.querySelector('.panah-kanan').addEventListener('click', function () {
+            currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length;
+            changeBackground(currentBackgroundIndex);
+        });
+
+        document.querySelector('.panah-kiri').addEventListener('click', function () {
+            currentBackgroundIndex = (currentBackgroundIndex - 1 + backgrounds.length) % backgrounds.length;
+            changeBackground(currentBackgroundIndex);
+        });
+        
+        function changeBackground(index) {
+            background.style.opacity = 0; 
+            setTimeout(function() {
+                background.style.backgroundImage = backgrounds[index];
+                background.style.opacity = 1; 
+            }, 200); 
+        }
+
+
+// Fungsi untuk memunculkan video YouTube https://youtu.be/ic5x9qH7aGI?si=wOTuMBP0jEbVbIVS
+function playYouTubeVideo() {
+    var apiKey = 'AIzaSyCvkb_UL5qp179YTh_yn0K-Mc9_V47nNPg';
+    var videoId = 'ic5x9qH7aGI';
+    var videoUrl = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('width', '850');
+    iframe.setAttribute('height', '550');
+    iframe.setAttribute('src', videoUrl);
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allowfullscreen', 'true');
+
+    var exitButton = document.createElement('button');
+    exitButton.textContent = 'Exit';
+    exitButton.classList.add('btn', 'btn-danger', 'me-2');
+    exitButton.addEventListener('click', function() {
+        window.location.reload();
+    });
+
+
+    var contentDiv = document.querySelector('.content');
+    contentDiv.innerHTML = ''; 
+    contentDiv.appendChild(iframe);
+    contentDiv.appendChild(exitButton);
+
+    iframe.style.position = 'absolute';
+    iframe.style.left = '50%';
+    iframe.style.top = '550%';
+    iframe.style.transform = 'translate(-50%, -50%)';
+
+    iframe.addEventListener('load', function() {
+        iframe.contentWindow.document.querySelector('video').addEventListener('ended', function() {
+            var backButton = document.createElement('button');
+            backButton.textContent = 'Back to Previous';
+            backButton.classList.add('btn', 'btn-secondary', 'mt-2');
+            backButton.addEventListener('click', function() {
+                changeBackground(currentBackgroundIndex);
+            });
+            contentDiv.appendChild(backButton);
+        });
+    });
+}
+
+        changeBackground(currentBackgroundIndex);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
